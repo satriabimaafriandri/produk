@@ -20,7 +20,10 @@ Aplikasi manajemen data siswa yang modern dengan antarmuka pengguna (UI) yang el
 
 | 📊 Dashboard Utama | 📝 Tambah Produk/Siswa | 👤 Detail & Profil |
 | :---: | :---: | :---: |
-| <img src="https://raw.githubusercontent.com/satriabimaafriandri/produk/main/screenshots/dashboard.gif" width="200" alt="Dashboard"> | <img src="https://raw.githubusercontent.com/satriabimaafriandri/produk/main/screenshots/add_product.gif" width="200" alt="Tambah"> | <img src="https://raw.githubusercontent.com/satriabimaafriandri/produk/main/screenshots/detail.gif" width="200" alt="Detail"> |
+| <img width="1919" height="1079" alt="Screenshot 2026-02-24 080738" src="https://github.com/user-attachments/assets/62b608ef-e725-4b8d-8680-72723e55e6f5" />
+ | <img width="1919" height="1079" alt="Screenshot 2026-02-24 080930" src="https://github.com/user-attachments/assets/2c85283b-46a7-49ce-8c30-02e1241e6df2" />
+ | <img width="1919" height="1079" alt="Screenshot 2026-02-24 080906" src="https://github.com/user-attachments/assets/4e0e6881-9378-4572-b85f-cd65dd041270" />
+ |
 | *Modern Card List* | *Validated Form* | *Profile Header UI* |
 
 > **Catatan:** Ganti link gambar di atas dengan screenshot asli kamu yang ada di folder `screenshots` repository agar muncul secara otomatis.
