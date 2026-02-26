@@ -3,17 +3,17 @@ class Produk {
   String? kode;
   String? nama;
   int? harga;
+  String? gambar; // Properti baru
 
-  Produk({this.id, this.kode, this.nama, this.harga});
+  Produk({this.id, this.kode, this.nama, this.harga, this.gambar});
 
   factory Produk.fromJson(Map<String, dynamic> json) {
     return Produk(
-      // Konversi paksa ke int agar aman dari error tipe data
-      id: json['id'] == null ? null : int.parse(json['id'].toString()),
-      kode: json['kode'],
-      nama: json['nama'],
-      // Konversi harga juga, kadang PHP kirim angka sebagai string
-      harga: json['harga'] == null ? 0 : int.parse(json['harga'].toString()),
+      id: json['id'] is int ? json['id'] : int.tryParse(json['id'].toString()),
+      kode: json['kode'].toString(),
+      nama: json['nama'].toString(),
+      harga: json['harga'] is int ? json['harga'] : int.tryParse(json['harga'].toString()),
+      gambar: json['gambar']?.toString(), // Ambil data nama gambar
     );
   }
 
@@ -23,6 +23,7 @@ class Produk {
       'kode': kode,
       'nama': nama,
       'harga': harga,
+      'gambar': gambar, // Sertakan di JSON
     };
   }
 }

@@ -116,7 +116,7 @@ class _ProdukPageState extends State<ProdukPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Bagian Atas (Placeholder Gambar/Icon)
+            // Bagian Atas (Gambar atau Placeholder)
             Expanded(
               flex: 3,
               child: Container(
@@ -128,12 +128,23 @@ class _ProdukPageState extends State<ProdukPage> {
                     end: Alignment.bottomRight,
                   ),
                 ),
-                child: Center(
-                  child: Text(
-                    produk.nama![0].toUpperCase(),
-                    style: const TextStyle(fontSize: 40, color: Colors.white, fontWeight: FontWeight.bold),
-                  ),
-                ),
+                child: (produk.gambar != null && produk.gambar!.isNotEmpty)
+                    ? Image.network(
+                        BaseUrl.imageUrl + produk.gambar!, // URL Gambar
+                        fit: BoxFit.cover,
+                        errorBuilder: (context, error, stackTrace) => Center(
+                          child: Text(
+                            produk.nama!.isNotEmpty ? produk.nama![0].toUpperCase() : '?',
+                            style: const TextStyle(fontSize: 40, color: Colors.white, fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                      )
+                    : Center(
+                        child: Text(
+                          produk.nama!.isNotEmpty ? produk.nama![0].toUpperCase() : '?',
+                          style: const TextStyle(fontSize: 40, color: Colors.white, fontWeight: FontWeight.bold),
+                        ),
+                      ),
               ),
             ),
             // Bagian Bawah (Info)
